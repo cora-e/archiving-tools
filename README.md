@@ -1,5 +1,5 @@
 # archiving-tools
-Various tools and tips I've accumulated trying to scrape websites.  The point is both to document what I've done for my own and others' reference, but also to provide working examples of downloading data from various types of host sites.
+Various tools and tips I've accumulated trying to scrape websites.  Mostly, this exists to document what I've done for my own and others' reference when digging into the final data. It may also be useful as a collection of working examples of downloading data from various types of host sites.
 
 ## Disclaimer
 

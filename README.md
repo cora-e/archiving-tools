@@ -1,6 +1,8 @@
 # archiving-tools
 Various tools and tips I've accumulated trying to scrape websites.  Mostly, this exists to document what I've done for my own and others' reference when digging into the final data. It may also be useful as a collection of working examples of downloading data from various types of host sites.
 
+All of the data downloaded with these tools is available through BitTorrent.  I post the torrents to [AcademicTorrents](https://academictorrents.com/browse.php?search=cprather&c6=1) and [SciOp](https://sciop.net/accounts/cprather).
+
 ## Disclaimer
 
 If you're looking to archive entire web sites, e.g. with working browse-able pages, etc, nothing here will help much.  There's plenty of tools you can point at those:
@@ -16,7 +18,7 @@ Other data download projects:
 * https://codeberg.org/nike_hercules/academia-preserver
 
 
-I am no expert at the archiving or package of web content, plenty of other people do that better.  Instead, I tend to go after non-web content or things which can't be easily scraped.  Generally that means datasets which are too large for scraping, which are surfaced in weird ways, or with aggressive rate-limiting or anti-scraping defenses.
+I am no expert at archiving or packaging web content, plenty of other people do that better.  Instead, I tend to go after datasets (PDF/CSV/etc) made available online, or things which can't be easily scraped.  Generally that means files or folders too large for scraping, data with weird download mechanics, or sites with aggressive rate-limiting or anti-scraping defenses.
 
 ## Sites Scraped
 
@@ -50,7 +52,7 @@ Link: https://asdc.larc.nasa.gov/data/
 
 Link: ftp://ftp.ncbi.nlm.nih.gov/pubchem/
 
-FTP, open access. `wget -r ftp://ftp.ncbi.nlm.nih.gov/pubchem/`.
+FTP, open access. `wget -r ftp://ftp.ncbi.nlm.nih.gov/pubchem/`.  About 9TB total!
 
 ### National Archives
 
@@ -60,7 +62,7 @@ The US National Archives is very big, and takes way more code to handle.  Separa
 
 It's not fast, but `transmission-create` is simple to use and easy to install most anywhere, including servers without GUI.  Sample usage with AcademicTorrents:
 ```
-transmission-create -o name.torrent -c "Comment" -t https://academictorrents.com/announce.php Folder/
+$ transmission-create -o name.torrent -c "Comment" -t https://academictorrents.com/announce.php Folder/
 ```
 when component datasets are compressed, 
 
